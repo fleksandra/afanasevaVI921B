@@ -32,13 +32,14 @@ int main()
 
     printf("res=%d", res);
 
-    free(A);
-    A=NULL;
     for (int i = 0; i < 3; i++)
     {
         free(A[i]);
         A[i]=NULL;
     }
+    
+    free(A);
+    A=NULL;
 
     return 0;
 }
